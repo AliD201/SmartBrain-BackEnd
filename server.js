@@ -9,7 +9,7 @@ import { handleImage,handleApiCall } from './controlers/image.js'
 const app = express()
 
 // const port = process.env.PORT;
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 
