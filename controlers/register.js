@@ -48,7 +48,7 @@ export const  handleRegisteration = (req, res, db, bcrypt) =>{
       if(err.detail.includes("already exists")){
     return  res.status(400).json('This email is alreaday in use')
     }else{
-      console.log('it is coming in);
+      console.log('it is coming in');
     return  res.status(400).json('unable to register')
     }
     })
