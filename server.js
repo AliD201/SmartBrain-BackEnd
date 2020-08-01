@@ -20,16 +20,23 @@ app.use(cors())
 
 //db
 
+// const db = knex({
+//   client: 'pg',
+//   connection: {
+//     host : 'postgresql-sinuous-60068',
+//     user : 'postgres',
+//     password : '12345',
+//     database : 'smart-brain'
+//   }
+// });
+
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : '12345',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    ssl :true
   }
 });
-
 
 // db.select('*').from('users')
 // .then(data=>{
