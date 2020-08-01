@@ -42,6 +42,9 @@ export const  handleRegisteration = (req, res, db, bcrypt) =>{
       .catch(trx.rollback);
 
   })  .catch(err=>{
+    console.log("here is my error");
+    console.log(err);
+    console.log('');
       if(err.detail.includes("already exists")){
     return  res.status(400).json('This email is alreaday in use')
     }else{
